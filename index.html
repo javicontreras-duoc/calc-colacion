@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Colación</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Calculadora de Colación</h2>
+    <form id="colacionForm">
+      <label for="horaEntrada">Hora de Entrada:</label>
+      <input type="time" id="horaEntrada" required>
+
+      <label for="horaSalida">Hora de Salida:</label>
+      <input type="time" id="horaSalida" required>
+
+      <button type="submit">Calcular Colación</button>
+    </form>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
