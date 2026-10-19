@@ -23,11 +23,15 @@ document.getElementById('colacionForm').addEventListener('submit', function(e) {
   if (duracionTotalHoras < 5) {
     mensaje = "No corresponde tiempo de colación (menos de 5 horas).";
   } else if (duracionTotalHoras <= 7.5) {
-    mensaje = "Corresponde **30 minutos (0:30)** de colación.";
+    mensaje = "Corresponde <strong>30 minutos (0:30)</strong> de colación.";
   } else {
-    mensaje = "Corresponde **1 hora (1:00)** de colación.";
+    mensaje = "Corresponde <strong>1 hora (1:00)</strong> de colación.";
   }
 
   const divResultado = document.getElementById('resultado');
-  divResultado.innerHTML = `<p>${mensaje}</p><small>Duración total del turno: ${duracionTotalHoras.toFixed(1)} hrs</small>`;
+  divResultado.style.display = 'block';
+  divResultado.innerHTML = `
+    <p>${mensaje}</p>
+    <small>Duración total del turno: ${duracionTotalHoras.toFixed(1)} hrs</small>
+  `;
 });
